@@ -236,7 +236,7 @@ function registrarEntrada(idParte, cantidad) {
     //       La nueva cantidad no debe superar capacidad_maxima.
     let nuevaCantidad = parte.cantidad + cantidad;
     if (nuevaCantidad > parte.capacidad_maxima) {
-        nuevaCantidad = parte.capacidad_maxima;
+        return false;
     }
     parte.cantidad = nuevaCantidad;
     // TODO: Retornar true para indicar éxito.
